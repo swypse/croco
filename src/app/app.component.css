@@ -1,0 +1,55 @@
+.croco-container {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background: #0b4c49;
+	color: #fff;
+}
+
+.croco {
+	position: relative;
+}
+
+.croco .top {
+	height: 75vh;
+	position: relative;
+}
+
+.croco .bottom {
+	height: 25vh;
+	text-align: center;
+}
+
+.btn {
+	background: #fff !important;
+	color: #0b4c49 !important;
+	border: none !important;
+	border-radius: 2px !important;
+	text-transform: uppercase;
+}
+
+
+/* animation */
+
+@keyframes eye {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	5% {
+		transform: translate3d(0, 0, 0);
+	}
+	45% {
+		transform: translate3d(5px, 0, 0) cubic-bezier(.5, -1, .5, 2);
+	}
+	55% {
+		transform: translate3d(5px, 0, 0);
+	}
+	90% {
+		transform: translate3d(5px, 0, 0);
+	}
+	91% {
+		transform: translate3d(0, 0, 0) cubic-bezier(.5, -1, .5, 2);
+	}
+}
+
+#eye-r-3, #eye-l-3 {
+	animation: eye 5s infinite alternate;
+}

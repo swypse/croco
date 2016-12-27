@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<div class="croco-container">
+	<div class="row">
+		<div class="col-sm-9">
+			<div class="croco">
+				<div class="top">
+					<app-croco-svg [word]="word.content"></app-croco-svg>
+					<div class="bottom">
+						<div class="btn btn-primary btn-lg" (click)="button()">
+							<i class="material-icons">cached</i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<app-recently-used-words></app-recently-used-words>
+		</div>
+	</div>
+</div>
