@@ -26,27 +26,19 @@
 	text-transform: uppercase;
 }
 
+.btn.loading .fa {
+	animation: rotate .2s infinite linear alternate;
+}
+
 
 /* animation */
 
-@keyframes eye {
+@keyframes rotate {
 	0% {
-		transform: translate3d(0, 0, 0);
+		transform: rotate(0deg);
 	}
-	5% {
-		transform: translate3d(0, 0, 0);
-	}
-	45% {
-		transform: translate3d(5px, 0, 0) cubic-bezier(.5, -1, .5, 2);
-	}
-	55% {
-		transform: translate3d(5px, 0, 0);
-	}
-	90% {
-		transform: translate3d(5px, 0, 0);
-	}
-	91% {
-		transform: translate3d(0, 0, 0) cubic-bezier(.5, -1, .5, 2);
+	100% {
+		transform: rotate(360deg);
 	}
 }
 

@@ -3,3 +3,10 @@ svg {
 	display: block;
 	margin: auto;
 }
+
+.svg-word {
+	font-size: 40px;
+	text-anchor: middle;
+	fill: #454545;
+	text-transform: capitalize;
+}

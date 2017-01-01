@@ -1,0 +1,29 @@
+.word-rating {
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 10px;
+	margin-top: -10px;
+}
+
+.word-rating .fa {
+	margin: 0 4px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.word-rating .active {
+	color: rgba(255, 255, 255, .8);
+}
+
+.word-rating .inactive {
+	color: rgba(255, 255, 255, .2);
+}
+
+.text {
+	color: rgba(255, 255, 255, .4);
+	font: 15px Arial;
+	display: block;
+	margin: 5px 0 0 0;
+	font-weight: 100;
+	text-align: center;
+}

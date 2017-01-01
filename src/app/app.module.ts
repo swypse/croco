@@ -10,6 +10,9 @@ import { WordsComponent } from './words/words.component';
 import { WordFormComponent } from './word-form/word-form.component';
 import { CrocoSvgComponent } from './croco-svg/croco-svg.component';
 import { RecentlyUsedWordsComponent } from './recently-used-words/recently-used-words.component';
+import { RecentlyUsedWordsService } from './recently-used-words/recently-used-words.service';
+import { LsService } from './shared/ls.service';
+import { WordRatingComponent } from './word-rating/word-rating.component';
 
 export const firebaseConfig = {
 	apiKey: ' AIzaSyCp_jGuzcDi6vzvzcT4B2XZHlVcew_Y0rg',
@@ -25,7 +28,8 @@ export const firebaseConfig = {
 		WordsComponent,
 		WordFormComponent,
 		CrocoSvgComponent,
-		RecentlyUsedWordsComponent
+		RecentlyUsedWordsComponent,
+		WordRatingComponent
 	],
 	imports: [
 		BrowserModule,
@@ -33,7 +37,11 @@ export const firebaseConfig = {
 		HttpModule,
 		AngularFireModule.initializeApp(firebaseConfig)
 	],
-	providers: [ApiService],
+	providers: [
+		ApiService,
+		LsService,
+		RecentlyUsedWordsService
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

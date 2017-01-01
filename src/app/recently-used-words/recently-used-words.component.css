@@ -1,3 +1,18 @@
-.recently, body {
-	background: red !important;
+.card {
+	margin: 30px 0;
+	background: none !important;
+	border-radius: 2px;
+	border: 3px solid rgba(255, 255, 255, .02);
+}
+
+.card .list-group-item {
+	background: none !important;
+	border-radius: 0 !important;
+	border-top: none;
+	border-color: rgba(255, 255, 255, .02);
+}
+
+.card .list-group-item:last-child {
+	border-bottom: none;
+	border-radius: 0 !important;
 }

@@ -4,9 +4,10 @@
 			<div class="croco">
 				<div class="top">
 					<app-croco-svg [word]="word.content"></app-croco-svg>
+					<app-word-rating [word]="word"></app-word-rating>
 					<div class="bottom">
 						<div class="btn btn-primary btn-lg" (click)="button()">
-							<i class="material-icons">cached</i>
+							<i class="fa fa-refresh" [class.fa-spin]="loading"></i>
 						</div>
 					</div>
 				</div>
