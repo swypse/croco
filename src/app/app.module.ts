@@ -16,6 +16,7 @@ import { RecentlyUsedWordsComponent } from './recently-used-words/recently-used-
 import { RecentlyUsedWordsService } from './recently-used-words/recently-used-words.service';
 import { LsService } from './shared/ls.service';
 import { WordRatingComponent } from './word-rating/word-rating.component';
+import { RulesDialogComponent } from './rules-dialog/rules-dialog.component';
 
 export const firebaseConfig = {
 	apiKey: ' AIzaSyCp_jGuzcDi6vzvzcT4B2XZHlVcew_Y0rg',
@@ -32,7 +33,8 @@ export const firebaseConfig = {
 		WordFormComponent,
 		CrocoSvgComponent,
 		RecentlyUsedWordsComponent,
-		WordRatingComponent
+		WordRatingComponent,
+		RulesDialogComponent
 	],
 	imports: [
 		BrowserModule,
@@ -46,6 +48,9 @@ export const firebaseConfig = {
 		ApiService,
 		LsService,
 		RecentlyUsedWordsService
+	],
+	entryComponents: [
+		RulesDialogComponent
 	],
 	bootstrap: [AppComponent]
 })

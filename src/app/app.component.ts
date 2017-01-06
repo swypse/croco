@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MdDialog, MdDialogRef } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
 import { Word } from "./word.model";
 import { ApiService } from "./shared/api.service";
 import './rxjs-operators';
 import { RecentlyUsedWordsService } from './recently-used-words/recently-used-words.service';
+import { RulesDialogComponent } from './rules-dialog/rules-dialog.component';
 
 @Component({
 	selector: 'app-root',
@@ -18,7 +20,10 @@ export class AppComponent implements OnInit {
 	word: Word = new Word({ content: "" });
 	loading: boolean = false;
 	app;
-	constructor(private api: ApiService,
+	rulesDialogRef: MdDialogRef<RulesDialogComponent>;
+	constructor(
+		private api: ApiService,
+		public dialog: MdDialog,
 		private recentlyService: RecentlyUsedWordsService) { }
 
 	ngOnInit() {
@@ -26,6 +31,12 @@ export class AppComponent implements OnInit {
 		this.app = {
 			title: "Слово для «Крокодила»",
 		};
+	}
+
+	openRulesDialog() {
+		this.rulesDialogRef = this.dialog.open(RulesDialogComponent, {
+			disableClose: false
+		});
 	}
 
 	getNewWord() {

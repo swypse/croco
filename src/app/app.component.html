@@ -6,11 +6,13 @@
 
 		<md-menu #menu="mdMenu">
 			<button md-menu-item (click)="getNewWord()">
+				<md-icon>cached</md-icon>
 				Новое слово
 			</button>
-			<button md-menu-item> Settings </button>
-			<button md-menu-item> Help </button>
-			<button md-menu-item disabled> Sign Out </button>
+			<button md-menu-item (click)="openRulesDialog()">
+				<md-icon>chrome_reader_mode</md-icon>
+				Правила игры
+			</button>
 		</md-menu>
 
 		{{app.title}}
@@ -24,9 +26,9 @@
 				<app-word-rating [word]="word"></app-word-rating>
 				<div class="get-new-word">
 					<button md-fab [disabled]="loading" color="primary" [class.bounceIn]="loading" (click)="getNewWord()" md-ripple>
-					<md-progress-spinner mode="indeterminate" color="accent" *ngIf="loading"></md-progress-spinner>
-<md-icon *ngIf="!loading">cached</md-icon>
-</button>
+						<md-progress-spinner mode="indeterminate" color="accent" *ngIf="loading"></md-progress-spinner>
+						<md-icon *ngIf="!loading">cached</md-icon>
+					</button>
 				</div>
 			</div>
 			<div class="flex-item" fxFlex="100%" fxFlex.gt-md="20%">
