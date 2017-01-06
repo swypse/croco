@@ -1,47 +1,39 @@
-.croco-container {
-	font-family: 'Open Sans Condensed', sans-serif;
-	background: #0b4c49;
-	color: #fff;
+.app-content {
+	padding: 30px;
 }
 
-.croco {
-	position: relative;
-}
-
-.croco .top {
-	height: 75vh;
-	position: relative;
-}
-
-.croco .bottom {
-	height: 25vh;
-	text-align: center;
-}
-
-.btn {
-	background: #fff !important;
-	color: #0b4c49 !important;
-	border: none !important;
-	border-radius: 2px !important;
-	text-transform: uppercase;
-}
-
-.btn.loading .fa {
+.loading .fa {
 	animation: rotate .2s infinite linear alternate;
 }
 
-
-/* animation */
-
-@keyframes rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+.app-toolbar-menu {
+	padding: 0 14px 0 14px;
+	color: white;
 }
 
-#eye-r-3, #eye-l-3 {
-	animation: eye 5s infinite alternate;
+.app-icon-button {
+	box-shadow: none;
+	user-select: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	filter: none;
+	font-weight: normal;
+	height: auto;
+	line-height: inherit;
+	margin: 0;
+	min-width: 0;
+	padding: 0;
+	text-align: left;
+	text-decoration: none;
+}
+
+.get-new-word {
+	text-align: center;
+	height: 100px;
+}
+
+.get-new-word md-progress-spinner {
+	width: 32px;
+	margin: -23px auto 0 auto;
 }

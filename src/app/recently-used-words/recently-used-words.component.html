@@ -1,15 +1,9 @@
-<br>
-<br>
-<br>
-
-<h3>
-	Недавние слова
-</h3>
-
-<div class="card">
-	<ul class="list-group list-group-flush">
-		<li *ngFor="let word of getWords()" class="list-group-item">
-			{{word.content}}
-		</li>
-	</ul>
-</div>
+<md-list>
+	<md-card-title>Недавние слова</md-card-title>
+	<md-list-item *ngFor="let word of getWords()">
+		<h3 md-line>{{word.content}}</h3>
+		<p md-line>
+			<span>Сложность: {{word.level}} </span>
+		</p>
+	</md-list-item>
+</md-list>

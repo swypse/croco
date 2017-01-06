@@ -10,7 +10,7 @@ export class WordRatingComponent implements OnInit, OnChanges {
 	@Input()
 	word: Word;
 	stars: number[];
-	text: string = '...';
+	text: string;
 
 	constructor() { }
 
@@ -22,7 +22,9 @@ export class WordRatingComponent implements OnInit, OnChanges {
 		return stars;
 	}
 
-	ngOnInit() { }
+	ngOnInit() {
+		this.text = '...';
+	}
 
 	ngOnChanges(changes: any) {
 		this.stars = this.getStars();
@@ -36,7 +38,7 @@ export class WordRatingComponent implements OnInit, OnChanges {
 	];
 
 	getText() {
-		return this.texts[this.word.level];
+		return 'Сложность: ' + this.texts[this.word.level];
 	}
 
 }

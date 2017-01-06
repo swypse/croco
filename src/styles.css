@@ -1,5 +1,8 @@
+@import '~@angular/material/core/theming/prebuilt/purple-green.css';
 html, body {
+	margin: 0;
+	padding: 0;
 	font-family: 'Open Sans Condensed', sans-serif;
-	background: #0b4c49;
+	background: #303030;
 	color: #fff;
 }

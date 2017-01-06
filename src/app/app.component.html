@@ -1,20 +1,40 @@
-<div class="croco-container">
-	<div class="row">
-		<div class="col-sm-9">
-			<div class="croco">
-				<div class="top">
-					<app-croco-svg [word]="word.content"></app-croco-svg>
-					<app-word-rating [word]="word"></app-word-rating>
-					<div class="bottom">
-						<div class="btn btn-primary btn-lg" (click)="button()">
-							<i class="fa fa-refresh" [class.fa-spin]="loading"></i>
-						</div>
-					</div>
+<md-sidenav-layout>
+	<md-toolbar color="primary">
+		<button md-icon-button [mdMenuTriggerFor]="menu">
+			<md-icon>more_vert</md-icon>
+		</button>
+
+		<md-menu #menu="mdMenu">
+			<button md-menu-item (click)="getNewWord()">
+				Новое слово
+			</button>
+			<button md-menu-item> Settings </button>
+			<button md-menu-item> Help </button>
+			<button md-menu-item disabled> Sign Out </button>
+		</md-menu>
+
+		{{app.title}}
+	</md-toolbar>
+
+	<div class="app-content">
+		<div class="flex-container" fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="space-around stretch" fxLayoutGap="0px"
+			fxLayoutGap.gt-md="50px">
+			<div class="flex-item" fxFlex="100%" fxFlex.gt-md="80%">
+				<app-croco-svg [word]="word.content" [loading]="loading"></app-croco-svg>
+				<app-word-rating [word]="word"></app-word-rating>
+				<div class="get-new-word">
+					<button md-fab [disabled]="loading" color="primary" [class.bounceIn]="loading" (click)="getNewWord()" md-ripple>
+					<md-progress-spinner mode="indeterminate" color="accent" *ngIf="loading"></md-progress-spinner>
+<md-icon *ngIf="!loading">cached</md-icon>
+</button>
 				</div>
 			</div>
-		</div>
-		<div class="col-sm-3">
-			<app-recently-used-words></app-recently-used-words>
+			<div class="flex-item" fxFlex="100%" fxFlex.gt-md="20%">
+				<md-card>
+					<app-recently-used-words></app-recently-used-words>
+				</md-card>
+			</div>
 		</div>
 	</div>
-</div>
+
+</md-sidenav-layout>

@@ -15,16 +15,20 @@ import { RecentlyUsedWordsService } from './recently-used-words/recently-used-wo
 	outputs: ['loading']
 })
 export class AppComponent implements OnInit {
-	word: Word = new Word({ content: "Waiting for a word" });
+	word: Word = new Word({ content: "" });
 	loading: boolean = false;
+	app;
 	constructor(private api: ApiService,
 		private recentlyService: RecentlyUsedWordsService) { }
 
 	ngOnInit() {
 		this.getWord();
+		this.app = {
+			title: "Слово для «Крокодила»",
+		};
 	}
 
-	button() {
+	getNewWord() {
 		this.getWord();
 	}
 

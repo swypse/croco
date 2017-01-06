@@ -1,14 +1,12 @@
 .word-rating {
 	text-align: center;
-	font-size: 26px;
-	margin-bottom: 10px;
-	margin-top: -10px;
+	margin: 10px auto;
+	display: block;
+	flex: none;
 }
 
-.word-rating .fa {
-	margin: 0 4px;
-	vertical-align: middle;
-	display: inline-block;
+.word-rating .material-icons {
+	width: 26px;
 }
 
 .word-rating .active {
@@ -20,6 +18,7 @@
 }
 
 .text {
+	font-size: 26px;
 	color: rgba(255, 255, 255, .4);
 	font: 15px Arial;
 	display: block;

@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 
+import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppComponent } from './app.component';
 import { ApiService } from './shared/api.service';
 import { WordsComponent } from './words/words.component';
@@ -35,7 +38,9 @@ export const firebaseConfig = {
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		AngularFireModule.initializeApp(firebaseConfig)
+		AngularFireModule.initializeApp(firebaseConfig),
+		MaterialModule.forRoot(),
+		FlexLayoutModule.forRoot()
 	],
 	providers: [
 		ApiService,
