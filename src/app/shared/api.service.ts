@@ -24,7 +24,7 @@ export class ApiService {
 	}
 
 	private _getRandomWord() {
-		let randomKey = this.ids[Math.ceil(Math.random() * this.count)];
+		let randomKey = this.getRandomKey();
 		let ref = this.af.database.list('/words', {
 			query: {
 				startAt: randomKey,
@@ -33,6 +33,10 @@ export class ApiService {
 			}
 		});
 		return ref.map(res => new Word(res[0]));
+	}
+
+	getRandomKey(){
+		return this.ids[Math.ceil(Math.random() * this.count)]
 	}
 
 	getWords() {
